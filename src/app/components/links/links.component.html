@@ -1,6 +1,6 @@
 <div class="w-full mx-auto 2xl:px-60 max-md:pt-40 lg:px-36 px-5">
   <div class="pl-[2.37rem] max-md:pl-[1rem] font-semibold text-gray-400 text-lg">
-    <p>Your links</p>
+    <p *ngIf="urls.length > 0">Your links</p>
   </div>
   <div *ngFor="let url of urls; let i = index" class="bg-white mt-4">
     <div class="rounded-lg shadow-lg p-[1.63rem] max-md:p-3">
