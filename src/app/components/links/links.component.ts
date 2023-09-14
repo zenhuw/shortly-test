@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { SubSink } from 'subsink/dist/subsink';
+import { Shortener } from 'src/app/models/shortener';
 
 @Component({
   selector: 'app-links',
@@ -13,7 +14,7 @@ import { SubSink } from 'subsink/dist/subsink';
 export class LinksComponent implements OnInit, OnDestroy {
   subs = new SubSink();
 
-  urls = null;
+  urls: Shortener[] = [];
 
   copiedIndex: number | null = null;
 

@@ -8,18 +8,18 @@
         class="w-full flex items-center max-md:items-start justify-between max-md:justify-start max-md:divide-y-2 max-md:flex-col"
       >
         <div class="pl-[0.37rem] max-md:p-1">
-          <a href="{{ url.result?.original_link }}" class="text-xl font-semibold text-gray-900">{{
-            url.result?.original_link
+          <a href="{{ url.result.original_link }}" class="text-xl font-semibold text-gray-900">{{
+            url.result.original_link
           }}</a>
         </div>
         <div class="flex max-md:w-full max-md:flex-col items-center max-md:items-start max-md:py-3 max-md:px-0">
           <div class="text-left bg-white mr-20 max-md:mr-0">
-            <a href="https://{{ url.result?.short_link }}" class="text-2xl font-medium text-teal-500">{{
+            <a href="https://{{ url.result.short_link }}" class="text-2xl font-medium text-teal-500">{{
               url.result?.short_link
             }}</a>
           </div>
           <button
-            (click)="copyLink(i, url.result?.short_link)"
+            (click)="copyLink(i, url.result.short_link)"
             class="rounded-[10px] shrink-0 max-md:w-full bg-teal-400 py-4 px-14 text-white text-xl font-semibold hover:bg-teal-600"
             [class.bg-teal-700]="copiedIndex === i"
             >{{ copiedIndex === i ? 'Copied' : 'Copy' }}</button

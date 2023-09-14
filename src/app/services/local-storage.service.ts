@@ -21,9 +21,4 @@ export class LocalStorageService {
     localStorage.setItem(key, data);
     this.storageSub.next('added');
   }
-
-  removeItem(key: string) {
-    localStorage.removeItem(key);
-    this.storageSub.next('removed');
-  }
 }

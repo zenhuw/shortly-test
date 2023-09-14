@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShortenComponent } from './shorten.component';
@@ -8,7 +9,7 @@ describe('ShortenComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ShortenComponent]
+      imports: [ShortenComponent, HttpClientTestingModule]
     });
     fixture = TestBed.createComponent(ShortenComponent);
     component = fixture.componentInstance;
