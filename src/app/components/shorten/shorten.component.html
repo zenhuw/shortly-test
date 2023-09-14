@@ -1,16 +1,32 @@
-<div class="w-full absolute px-5 top-2/3 max-md:top-[80%] bg-blend-overlay lg:px-36 2xl:px-60">
+<div class="w-full absolute px-5 top-[41rem] max-md:top-[44rem] z-10 bg-blend-overlay lg:px-36 2xl:px-60">
   <div
     class="flex max-sm:flex-col max-md:flex-wrap max-md:flex-col bg-cover rounded-lg bg-blend-luminosity h-[200px] pl-[38px] gap-[20px] pr-[26px] max-md:justify-center items-center bg-purple-900 bg-[url('/assets/images/bg-shorten-desktop.svg')]"
   >
-    <div class="h-[61px] w-full px-6 flex items-center bg-white rounded-[10px]">
-      <input
-        class="h-[27px] w-full focus:outline-none text-lg text-gray-500 font-medium"
-        placeholder="Enter you link here"
-      />
-    </div>
-    <button
-      class="rounded-[10px] w-[200px] max-md:w-full shrink-0 bg-teal-400 h-16 px-9 py-4 text-white text-xl font-semibold"
-      >Shorten it!</button
+    <form
+      [formGroup]="urlFormGroup"
+      #form="ngForm"
+      (ngSubmit)="shorten()"
+      class="w-full flex max-md:flex-col gap-[20px]"
     >
+      <div class="w-full">
+        <div
+          class="h-[61px] w-full px-6 flex items-center bg-white rounded-[10px] border-2"
+          [class.border-red-500]="urlFormGroup.invalid && form.submitted"
+          [class.border-green-500]="form.submitted && urlFormGroup.pristine && !urlFormGroup.invalid"
+        >
+          <input
+            formControlName="url"
+            class="h-[27px] w-full focus:outline-none text-lg text-gray-500 font-medium"
+            placeholder="Enter you link here"
+          />
+        </div>
+        <span class="text-red-500 ml-3" *ngIf="urlFormGroup.invalid && form.submitted">Please add a link</span>
+      </div>
+      <button
+        type="submit"
+        class="rounded-[10px] w-[200px] max-md:w-full shrink-0 bg-teal-400 h-16 px-9 py-4 text-white text-xl font-semibold hover:bg-teal-600 active:bg-teal-700"
+        >Shorten it!</button
+      >
+    </form>
   </div>
 </div>
