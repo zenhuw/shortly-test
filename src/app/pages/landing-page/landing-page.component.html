@@ -1,5 +1,7 @@
-<div class="w-full">
-  <div class="h-full px-5 lg:px-36 pt-7 lg:pt-12 2xl:px-60 overflow-hidden">
+<div class="w-full relative">
+  <div
+    class="h-full px-5 lg:px-36 pt-7 lg:pt-12 2xl:px-60 overflow-hidden bg-[url('/assets/images/illustration-working.svg')] bg-no-repeat bg-custom max-md:bg-[500%_20%] max-md:bg-[length:95%]"
+  >
     <div class="h-full lg:pb-24 max-md:pb-5">
       <app-navbar></app-navbar>
       <div class="flex flex-col-reverse relative lg:flex-row mt-32 max-md:mt-[21rem] justify-between mb-[102px]">
@@ -11,27 +13,83 @@
           <p class="text-gray-500 text-xl font-medium max-md:text-center break-words w-[477px] max-md:w-full"
             >Build your brand’s recognition and get detailed insights on how your links are performing.
           </p>
-          <button class="mt-7 rounded-[40px] bg-teal-400 h-16 px-9 py-4 justify-center text-white text-xl font-semibold"
+          <button
+            class="mt-7 rounded-[40px] bg-teal-400 h-16 px-9 py-4 justify-center text-white text-xl font-semibold hover:bg-teal-600 active:bg-teal-700"
             >Get Started</button
           >
-        </div>
-        <div>
-          <img
-            class="bg-cover max-md:absolute max-lg:absolute lg:absolute max-md:top-[-100%] max-md:left-24 max-lg:right-0 top-[-70px] lg:right-[-200px] -z-10 2xl:right-[-200px]"
-            src="../../../assets/images/illustration-working.svg"
-            alt="illustration"
-          />
         </div>
       </div>
     </div>
   </div>
   <app-shorten></app-shorten>
-  <div class="h-[1009px] bg-gray-100"> </div>
+  <div class="h-full bg-gray-100 pb-8">
+    <div class="pt-44 max-md:pt-4">
+      <app-links></app-links>
+    </div>
+  </div>
+  <div class="h-full bg-gray-100 pb-12">
+    <div class="flex items-center flex-col pt-12 max-md:px-2">
+      <div class="flex flex-col items-center mb-10 text-center">
+        <p class="text-3xl lg:text-[34px] font-semibold mb-3 lg:mb-[17px]">Advanced Statistics</p>
+        <p class="text-lg font-medium text-gray-500 lg:w-[567px]"
+          >Track how your links are performing across the web with our advanced statistics dashboard.</p
+        >
+      </div>
+
+      <div class="flex flex-col items-center lg:flex-row lg:items-start">
+        <div class="relative pt-10 lg:w-[362px] flex justify-center">
+          <div class="absolute top-0 lg:left-14 bg-gray-800 p-5 rounded-full">
+            <img src="../../../assets/images/icon-brand-recognition.svg" alt="logo" class="" />
+          </div>
+          <div class="min-h-[240px] px-9 pb-[34px] rounded-lg shadow-lg text-center lg:text-left bg-white">
+            <p class="text-2xl font-semibold text-gray-900 pb-[21px] pt-[61px]">Brand Recognition</p>
+            <p class="text-sm font-medium text-gray-500"
+              >Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil
+              confidence in your content.</p
+            >
+          </div>
+        </div>
+        <div class="w-2 lg:w-8 h-12 lg:h-52 border-r-8 lg:border-r-0 lg:border-b-8 border-teal-400"></div>
+        <div class="relative pt-10 lg:w-[362px] lg:mt-10 flex justify-center">
+          <div class="absolute top-0 lg:left-14 bg-gray-800 p-5 rounded-full">
+            <img src="../../../assets/images/icon-detailed-records.svg" alt="logo" class="" />
+          </div>
+
+          <div class="min-h-[240px] px-9 pb-[34px] rounded-lg shadow-lg text-center lg:text-left bg-white">
+            <p class="text-2xl font-semibold text-gray-900 pb-[21px] pt-[61px]">Detailed Records</p>
+            <p class="text-sm font-medium text-gray-500"
+              >Gain insights into who is clicking your links. Knowing when and where people engage with your content
+              helps inform better decisions.</p
+            >
+          </div>
+        </div>
+        <div class="w-2 lg:w-8 h-12 lg:h-52 border-r-8 lg:border-r-0 lg:border-b-8 border-teal-400"></div>
+        <div class="relative pt-10 lg:w-[362px] lg:mt-20 flex justify-center">
+          <div class="absolute top-0 lg:left-[52px] bg-gray-800 p-5 rounded-full">
+            <img src="../../../assets/images/icon-fully-customizable.svg" alt="logo" class="" />
+          </div>
+
+          <div class="min-h-[240px] px-9 pb-[34px] rounded-lg shadow-lg text-center lg:text-left bg-white">
+            <p class="text-2xl font-semibold text-gray-900 pb-[21px] pt-[61px]">Fully Customizable</p>
+            <p class="text-sm font-medium text-gray-500"
+              >Improve brand awareness and content discoverability through customizable links, supercharging audience
+              engagement.</p
+            >
+          </div>
+           </div
+        >
+          </div
+      >
+    </div>
+  </div>
   <div
     class="flex flex-col max-md:px-10 justify-center items-center gap-[20px] w-full bg-cover bg-blend-luminosity h-[250px] bg-purple-900 bg-[url('/assets/images/bg-boost-desktop.svg')]"
   >
     <p class="text-[34px] max-md:text-2xl font-semibold text-white">Boost your links today</p>
-    <button class="rounded-[40px] bg-teal-400 h-16 px-9 py-4 text-white text-xl font-semibold">Get Started</button>
+    <button
+      class="rounded-[40px] bg-teal-400 h-16 px-9 py-4 text-white text-xl font-semibold hover:bg-teal-600 active:bg-teal-700"
+      >Get Started</button
+    >
   </div>
 
   <app-footer></app-footer>
