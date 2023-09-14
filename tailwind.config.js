@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    backgroundPosition: {
+      'custom': '105% 75%',
+    }
   },
   plugins: [],
 }
